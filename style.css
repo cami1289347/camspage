@@ -41,30 +41,31 @@ body{
 
 }
 
-
 .presentacion {
-    padding: 5% 10%;
+    padding: 5% 5%; /* reducimos el padding para más espacio */
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* evitamos que baje */
+    box-sizing: border-box;
 }
 
 .presentacion__contenido {
-    flex: 1 1 55%; /* crecer, reducir, base 55% */
+    flex: 0 0 calc(60% - 1rem); /* 60% menos un pequeño margen */
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    min-width: 300px; /* para que no se reduzca demasiado */
+    box-sizing: border-box;
 }
 
 .presentacion__imagen {
-    flex: 1 1 40%; /* crecer, reducir, base 40% */
+    flex: 0 0 calc(35% - 1rem); /* 35% menos margen */
     max-width: 400px;
     width: 100%;
     border-radius: 8px;
-    min-width: 200px;
+    box-sizing: border-box;
 }
+
 
 .presentacion__contenido__titulo{
     font-size: 2.2rem;

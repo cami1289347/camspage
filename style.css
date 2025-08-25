@@ -21,7 +21,7 @@ body{
 
 .header{
     width: 100%;
-    padding: 2% 10%;
+    padding: 2% 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,7 +42,7 @@ body{
 }
 
 .presentacion {
-    padding: 5% 10%;
+    padding: 5% 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;

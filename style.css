@@ -50,18 +50,20 @@ body{
     flex-wrap: wrap;
 }
 
-.presentacion__contenido{
-    width: 50%;
+.presentacion__contenido {
+    flex: 1 1 55%; /* crecer, reducir, base 55% */
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    min-width: 300px; /* para que no se reduzca demasiado */
 }
 
-/* Estilo para la imagen */
 .presentacion__imagen {
-    width: 40%;
+    flex: 1 1 40%; /* crecer, reducir, base 40% */
     max-width: 400px;
-    border-radius: 8px; /* opcional */
+    width: 100%;
+    border-radius: 8px;
+    min-width: 200px;
 }
 
 .presentacion__contenido__titulo{
@@ -123,4 +125,20 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 100;
+}
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .presentacion {
+        flex-direction: column;
+        padding: 5% 5%;
+    }
+    .presentacion__contenido, .presentacion__imagen {
+        flex: 1 1 100%;
+        max-width: 100%;
+        min-width: auto;
+    }
+    .presentacion__imagen {
+        margin-top: 2rem;
+        width: 100%;
+    }
 }

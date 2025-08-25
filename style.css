@@ -43,12 +43,19 @@ body{
 
 
 
-.presentacion {
-    padding: 5% 10%;
+.presentacion__contenido {
+    width: 100%;
     display: flex;
+    flex-direction: row; /* Cambiar de column a row */
+    gap: 2rem;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+/* La imagen dentro de presentacion__contenido */
+.presentacion__contenido img {
+    width: 40%;
+    max-width: 400px;
+    border-radius: 8px; /* opcional */
 }
 
 .presentacion__contenido{

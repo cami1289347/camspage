@@ -43,7 +43,7 @@ body{
 
 
 
-.presentacion__contenido {
+.presentacion__contenido{
     width: 100%;
     display: flex;
     flex-direction: row; /* Cambiar de column a row */
@@ -56,13 +56,6 @@ body{
     width: 40%;
     max-width: 400px;
     border-radius: 8px; /* opcional */
-}
-
-.presentacion__contenido{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }
 
 

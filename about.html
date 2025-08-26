@@ -1,43 +1,72 @@
-<!DOCTYPE html>
-<html lang="es-mx">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="style.css">
+<section class="presentacion__contenido">
+    <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
 
-</head>
-<body>
-    <header class="header">
-        <nav class="header__menu">
-            <a class="header__menu__link" href="index.html">Home</a>
-            <a class="header__menu__link" href="about.html">Sobre mí</a>
-            <a class="header__menu__link" href="proyectos.html">Mis proyectos</a>
-        </nav>
-    </header>
-    <main class="presentacion">
-        <section class="presentacion__contenido">
-            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
-                <p class="presentacion__contenido__texto">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
-                    atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident,
-                    similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+    <!-- Datos personales dinámicos -->
+    <div class="datos-personales">
+        <h2>Datos personales</h2>
+        <ul id="datos-lista"></ul>
+    </div>
 
-                </p>
-                <p class="presentacion__contenido__texto">
-                    Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est
-                    eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
-                    assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
-                    necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-                    rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
-                    perferendis doloribus asperiores ipsum delis forum birol parela maxime infena. Excepteur sint occaecat
-                </p>
-               
-        </section>
-            <img class="presentacion__imagen" src="./assets/2.png" alt="Foto de Lucia Moran desarrolando un proyecto">
-    </main>
-    <footer class="footer">
-        <p>Desarrollado por Lucia Moran</p>
-    </footer>
+    <!-- Intereses -->
+    <div class="intereses">
+        <h2>Intereses</h2>
+        <ul id="intereses-lista"></ul>
+    </div>
+
+    <!-- Canciones favoritas -->
+    <div class="canciones-fav">
+        <h2>Canciones favoritas</h2>
+        <ul id="canciones-lista"></ul>
+    </div>
+
+    <!-- Libros recomendados -->
+    <div class="libros">
+        <h2>Libros que recomiendo</h2>
+        <ul id="libros-lista"></ul>
+    </div>
+
+    <!-- Películas recomendadas -->
+    <div class="peliculas">
+        <h2>Películas que recomiendo</h2>
+        <ul id="peliculas-lista"></ul>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="hobbies">
+        <h2>Hobbies</h2>
+        <ul id="hobbies-lista"></ul>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="idiomas">
+        <h2>Idiomas</h2>
+        <ul id="idiomas-lista"></ul>
+    </div>
+
+    <!-- Botón para descargar o ver currículum -->
+    <div class="curriculum">
+        <a href="curriculum.html" class="boton-curriculum" target="_blank" rel="noopener noreferrer">Ver mi Currículum</a>
+    </div>
+
+    <!-- Formulario de contacto -->
+    <div class="contacto">
+        <h2>Contacto</h2>
+        <form id="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required placeholder="Tu correo">
+
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu número">
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p id="mensaje-envio" style="display:none; margin-top: 1rem; color: #cab6b6;"></p>
+    </div>
+</section>
+
     
 </body>
 </html>

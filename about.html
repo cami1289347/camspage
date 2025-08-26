@@ -66,6 +66,88 @@
         <p id="mensaje-envio" style="display:none; margin-top: 1rem; color: #cab6b6;"></p>
     </div>
 </section>
+<script>
+  // Datos que quieres mostrar
+  const datosPersonales = [
+    "Nombre completo: Lucía Morán Aragón",
+    "Edad: 19 años",
+    "Nacionalidad: Peruana",
+    "Cumpleaños: 13 de Noviembre"
+  ];
+
+  const intereses = [
+    "Ciberseguridad",
+    "Inteligencia Artificial",
+    "Backend",
+    "Maching learning",
+        "Viajar",
+    "Fotografía"
+  ];
+
+  const cancionesFavoritas = [
+    "Bohemian Rhapsody - Queen",
+    "Manchild - Sabrina Carpenter",
+    "Shape of You - Ed Sheeran"
+    "Tear in my heart - Twenty One Pilots"
+  ];
+
+  const librosRecomendados = [
+    "Cien años de soledad - Gabriel García Márquez",
+    "Mi planta naranja lima - José Mauro de Vasconcelos",
+    "De vuelta a Casa - Kate Morton"
+    "
+  ];
+
+  const peliculasRecomendadas = [
+    "Busqueda Impacable",
+    "Lo imposible",
+    "Talentos Ocultos"
+  ];
+
+  const hobbies = [
+    "Escuchar música",
+    "Leer novelas",
+    "Ver Futbol"
+  ];
+
+  const idiomas = [
+    "Español (nativo)",
+    "Inglés (Medio)",
+  ];
+
+  // Función para mostrar listas dinámicamente
+  function mostrarLista(id, lista) {
+    const contenedor = document.getElementById(id);
+    lista.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      contenedor.appendChild(li);
+    });
+  }
+
+  mostrarLista('datos-lista', datosPersonales);
+  mostrarLista('intereses-lista', intereses);
+  mostrarLista('canciones-lista', cancionesFavoritas);
+  mostrarLista('libros-lista', librosRecomendados);
+  mostrarLista('peliculas-lista', peliculasRecomendadas);
+  mostrarLista('hobbies-lista', hobbies);
+  mostrarLista('idiomas-lista', idiomas);
+
+  // Validación y manejo del formulario
+  const form = document.getElementById('form-contacto');
+  const mensaje = document.getElementById('mensaje-envio');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Aquí podrías enviar los datos a un backend, pero por ahora solo mostramos mensaje
+    mensaje.textContent = `Gracias por contactarme, ${form.nombre.value}. Te responderé pronto.`;
+    mensaje.style.display = 'block';
+
+    // Limpiar formulario
+    form.reset();
+  });
+</script>
 
     
 </body>

@@ -1,6 +1,101 @@
-!doctor type 
+<!DOCTYPE html>
+<html lang="es">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros | Beauty Bliss</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .section {
+      display: flex;
+      align-items: center;
+      padding: 40px 80px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .section.reverse {
+      flex-direction: row-reverse;
+    }
+    .section img {
+      width: 45%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .section-content {
+      width: 50%;
+    }
+    .section-content h2 {
+      font-size: 2rem;
+      color: #D65C9A;
+      margin-bottom: 10px;
+    }
+    .section-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #333;
+    }
+        header.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .logo img {
+      height: 50px;
+    }
 
-  
+      .nav-links a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+  </style>
 </head>
-  
+<body>
+
+ <<header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="about.html">Sobre mí</a>
+            <a class="header__menu__link" href="proyectos.html">Mis proyectos</a>
+        </nav>
+    </header>
+
+<main>
+  <section class="section">
+    <img src="Proyecto1.png" alt="Proyecto1">
+    <div class="section-content">
+      <h2>Malla de la Universidad</h2>
+      <p> Malla curricular de la carrera de Computación Cientifica en la Universidad Nacional Mayor de San Marcos </p>
+    </div>
+  </section>
+
+  <section class="section reverse">
+    <img src="Proyecto2.png" alt="Proyecto2">
+    <div class="section-content">
+      <h2>Juego del codigo secreto</h2>
+      <p>Un juego muy entretenido donde se tiene que adivinar cual es el número aleatorio y te va dando pistas</p>
+    </div>
+  </section>
+
+
+  <section class="section ">
+    <img src="Proyecto3.png" alt="Proyecto3">
+    <div class="section-content">
+      <h2>Juego del amigo secreto </h2>
+      <p>Un juego donde sorteas entre amigos que ingresas y puedes designa amigos.</p>
+    </div>
+  </section>
+</main>
+
+ <footer class="footer">
+        <p>Desarrollado por Lucia Moran</p>
+    </footer>
+
+
+</body>
+</html>

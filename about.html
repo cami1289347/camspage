@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sobre mí - Lucía Morán</title>
     <style>
+        /* Tus estilos aquí (igual que los que enviaste) */
         @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
         * {
@@ -97,14 +98,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .presentacion__imagen {
-            flex: 1 1 350px;
-            max-width: 400px;
-            border-radius: 8px;
-            object-fit: cover;
-            align-self: center;
-        }
-
         /* Botón currículum */
         .boton-curriculum {
             display: inline-block;
@@ -169,31 +162,6 @@
             font-weight: 600;
             font-style: italic;
         }
-
-        /* Footer */
-        .footer {
-            color: #F6F6F6;
-            background-color: #cab6b6;
-            padding: 1rem;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 100;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            main.presentacion {
-                flex-direction: column;
-                padding: 3% 5%;
-            }
-
-            .presentacion__imagen {
-                max-width: 100%;
-                width: 100%;
-                margin-top: 2rem;
-            }
-        }
     </style>
 </head>
 <body>
@@ -204,158 +172,155 @@
             <a class="header__menu__link" href="proyectos.html">Mis proyectos</a>
         </nav>
     </header>
-<main class="presentacion">
-<section class="presentacion__contenido">
-    <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
 
-    <!-- Datos personales dinámicos -->
-    <div class="datos-personales">
-        <h2>Datos personales</h2>
-        <ul id="datos-lista"></ul>
-    </div>
+    <main class="presentacion">
+        <section class="presentacion__contenido">
+            <h1 class="presentacion__contenido__titulo">Sobre mí</h1>
 
-    <!-- Intereses -->
-    <div class="intereses">
-        <h2>Intereses</h2>
-        <ul id="intereses-lista"></ul>
-    </div>
+            <div class="datos-personales">
+                <h2>Datos personales</h2>
+                <ul id="datos-lista"></ul>
+            </div>
 
-    <!-- Canciones favoritas -->
-    <div class="canciones-fav">
-        <h2>Canciones favoritas</h2>
-        <ul id="canciones-lista"></ul>
-    </div>
+            <div class="intereses">
+                <h2>Intereses</h2>
+                <ul id="intereses-lista"></ul>
+            </div>
 
-    <!-- Libros recomendados -->
-    <div class="libros">
-        <h2>Libros que recomiendo</h2>
-        <ul id="libros-lista"></ul>
-    </div>
+            <div class="canciones-fav">
+                <h2>Canciones favoritas</h2>
+                <ul id="canciones-lista"></ul>
+            </div>
 
-    <!-- Películas recomendadas -->
-    <div class="peliculas">
-        <h2>Películas que recomiendo</h2>
-        <ul id="peliculas-lista"></ul>
-    </div>
+            <div class="libros">
+                <h2>Libros que recomiendo</h2>
+                <ul id="libros-lista"></ul>
+            </div>
 
-    <!-- Hobbies -->
-    <div class="hobbies">
-        <h2>Hobbies</h2>
-        <ul id="hobbies-lista"></ul>
-    </div>
+            <div class="peliculas">
+                <h2>Películas que recomiendo</h2>
+                <ul id="peliculas-lista"></ul>
+            </div>
 
-    <!-- Idiomas -->
-    <div class="idiomas">
-        <h2>Idiomas</h2>
-        <ul id="idiomas-lista"></ul>
-    </div>
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <ul id="hobbies-lista"></ul>
+            </div>
 
-    <!-- Botón para descargar o ver currículum -->
-    <div class="curriculum">
-        <a href="curriculum.html" class="boton-curriculum" target="_blank" rel="noopener noreferrer">Ver mi Currículum</a>
-    </div>
+            <div class="idiomas">
+                <h2>Idiomas</h2>
+                <ul id="idiomas-lista"></ul>
+            </div>
 
-    <!-- Formulario de contacto -->
-    <div class="contacto">
-        <h2>Contacto</h2>
-        <form id="form-contacto">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            <div class="curriculum">
+                <a href="curriculum.html" class="boton-curriculum" target="_blank" rel="noopener noreferrer">Ver mi Currículum</a>
+            </div>
 
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required placeholder="Tu correo">
+            <div class="contacto">
+                <h2>Contacto</h2>
+                <form id="form-contacto" novalidate>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
 
-            <label for="telefono">Número de teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" placeholder="Tu número">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required placeholder="Tu correo" />
 
-            <button type="submit">Enviar</button>
-        </form>
-        <p id="mensaje-envio" style="display:none; margin-top: 1rem; color: #cab6b6;"></p>
-    </div>
-</section>
-<script>
-  // Datos que quieres mostrar
-  const datosPersonales = [
-    "Nombre completo: Lucía Morán Aragón",
-    "Edad: 19 años",
-    "Nacionalidad: Peruana",
-    "Cumpleaños: 13 de Noviembre"
-  ];
+                    <label for="telefono">Número de teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Tu número" />
 
-  const intereses = [
-    "Ciberseguridad",
-    "Inteligencia Artificial",
-    "Backend",
-    "Maching learning",
-        "Viajar",
-    "Fotografía"
-  ];
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="mensaje-envio" style="display:none;"></p>
+            </div>
+        </section>
+    </main>
 
-  const cancionesFavoritas = [
-    "Bohemian Rhapsody - Queen",
-    "Manchild - Sabrina Carpenter",
-    "Shape of You - Ed Sheeran"
-    "Tear in my heart - Twenty One Pilots"
-  ];
+    <script>
+        // Datos que quieres mostrar
+        const datosPersonales = [
+            "Nombre completo: Lucía Morán Aragón",
+            "Edad: 19 años",
+            "Nacionalidad: Peruana",
+            "Cumpleaños: 13 de Noviembre"
+        ];
 
-  const librosRecomendados = [
-    "Cien años de soledad - Gabriel García Márquez",
-    "Mi planta naranja lima - José Mauro de Vasconcelos",
-    "De vuelta a Casa - Kate Morton"
-    "
-  ];
+        const intereses = [
+            "Ciberseguridad",
+            "Inteligencia Artificial",
+            "Backend",
+            "Machine learning",
+            "Viajar",
+            "Fotografía"
+        ];
 
-  const peliculasRecomendadas = [
-    "Busqueda Impacable",
-    "Lo imposible",
-    "Talentos Ocultos"
-  ];
+        const cancionesFavoritas = [
+            "Bohemian Rhapsody - Queen",
+            "Manchild - Sabrina Carpenter",
+            "Shape of You - Ed Sheeran",
+            "Tear in my heart - Twenty One Pilots"
+        ];
 
-  const hobbies = [
-    "Escuchar música",
-    "Leer novelas",
-    "Ver Futbol"
-  ];
+        const librosRecomendados = [
+            "Cien años de soledad - Gabriel García Márquez",
+            "Mi planta naranja lima - José Mauro de Vasconcelos",
+            "De vuelta a Casa - Kate Morton"
+        ];
 
-  const idiomas = [
-    "Español (nativo)",
-    "Inglés (Medio)",
-  ];
+        const peliculasRecomendadas = [
+            "Busqueda Implacable",
+            "Lo imposible",
+            "Talentos Ocultos"
+        ];
 
-  // Función para mostrar listas dinámicamente
-  function mostrarLista(id, lista) {
-    const contenedor = document.getElementById(id);
-    lista.forEach(item => {
-      const li = document.createElement('li');
-      li.textContent = item;
-      contenedor.appendChild(li);
-    });
-  }
+        const hobbies = [
+            "Escuchar música",
+            "Leer novelas",
+            "Ver futbol"
+        ];
 
-  mostrarLista('datos-lista', datosPersonales);
-  mostrarLista('intereses-lista', intereses);
-  mostrarLista('canciones-lista', cancionesFavoritas);
-  mostrarLista('libros-lista', librosRecomendados);
-  mostrarLista('peliculas-lista', peliculasRecomendadas);
-  mostrarLista('hobbies-lista', hobbies);
-  mostrarLista('idiomas-lista', idiomas);
+        const idiomas = [
+            "Español (nativo)",
+            "Inglés (medio)"
+        ];
 
-  // Validación y manejo del formulario
-  const form = document.getElementById('form-contacto');
-  const mensaje = document.getElementById('mensaje-envio');
+        // Función para mostrar listas dinámicamente
+        function mostrarLista(id, lista) {
+            const contenedor = document.getElementById(id);
+            lista.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                contenedor.appendChild(li);
+            });
+        }
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+        mostrarLista('datos-lista', datosPersonales);
+        mostrarLista('intereses-lista', intereses);
+        mostrarLista('canciones-lista', cancionesFavoritas);
+        mostrarLista('libros-lista', librosRecomendados);
+        mostrarLista('peliculas-lista', peliculasRecomendadas);
+        mostrarLista('hobbies-lista', hobbies);
+        mostrarLista('idiomas-lista', idiomas);
 
-    // Aquí podrías enviar los datos a un backend, pero por ahora solo mostramos mensaje
-    mensaje.textContent = `Gracias por contactarme, ${form.nombre.value}. Te responderé pronto.`;
-    mensaje.style.display = 'block';
+        // Validación y manejo del formulario
+        const form = document.getElementById('form-contacto');
+        const mensaje = document.getElementById('mensaje-envio');
 
-    // Limpiar formulario
-    form.reset();
-  });
-</script>
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    
+            if (!form.checkValidity()) {
+                mensaje.style.color = '#ff6961'; // rojo para error
+                mensaje.textContent = 'Por favor, completa todos los campos requeridos correctamente.';
+                mensaje.style.display = 'block';
+                return;
+            }
+
+            mensaje.style.color = '#cab6b6'; // color normal
+            mensaje.textContent = `Gracias por contactarme, ${form.nombre.value}. Te responderé pronto.`;
+            mensaje.style.display = 'block';
+
+            form.reset();
+        });
+    </script>
 </body>
 </html>
